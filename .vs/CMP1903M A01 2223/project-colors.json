@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "1a2f9ca1-e6d8-4662-b3e5-32190dd347c7": {
+      "ProjectGuid": "1a2f9ca1-e6d8-4662-b3e5-32190dd347c7",
+      "DisplayName": "CMP1903M A01 2223",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

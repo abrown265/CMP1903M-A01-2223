@@ -13,8 +13,17 @@ namespace CMP1903M_A01_2223
         public Pack()
         {
             //Initialise the card pack here
-        }
+            string card_pack;
+            
+            int cards = 0;
 
+            while (cards > 52)
+            {
+                card_value = 
+                card_suit = 
+            }
+
+        }
         public static bool shuffleCardPack(int typeOfShuffle)
         {
             //Shuffles the pack based on the type of shuffle

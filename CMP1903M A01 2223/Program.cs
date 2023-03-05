@@ -10,7 +10,37 @@ namespace CMP1903M_A01_2223
     {
         static void Main(string[] args)
         {
+            int shuffle_type = 0;
+            int deal_amount = 0;
+            bool shuffle_cards;
 
+            Console.WriteLine("What kind of shuffle would you like to do (enter number):\n1: Fish-Yates Shuffle\n2: Riffle Shuffle\n3: No Shuffle\n");
+            shuffle_type = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many do you want to deal?\n");
+            deal_amount = int.Parse(Console.ReadLine());
+
+
+            if (shuffle_type != 3)
+            {
+                Pack.shuffleCardPack(shuffle_type);
+                shuffle_cards = true;
+            }
+            else
+            {
+                shuffle_cards = false;
+            }
+
+            if (deal_amount == 1)
+            {
+                Pack.deal();
+            }
+            else
+            {
+                Pack.dealCard(deal_amount);
+            }
+
+
+            Console.ReadLine();
         }
     }
 }

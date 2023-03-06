@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace CMP1903M_A01_2223
 {
-    internal class Testing
+    class Testing
     {
-        Pack test_pack = new Pack();
+        static void Main(string[] args)
+        {
+            Pack test_pack = new Pack();
+            Console.WriteLine(test_pack);
 
-
+            Console.ReadLine();
+        }
     }
 }

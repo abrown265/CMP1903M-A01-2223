@@ -14,21 +14,14 @@ namespace CMP1903M_A01_2223
             int deal_amount = 0;
             bool shuffle_cards;
 
-            Console.WriteLine("What kind of shuffle would you like to do (enter number):\n1: Fish-Yates Shuffle\n2: Riffle Shuffle\n3: No Shuffle\n");
+            Console.WriteLine("What kind of shuffle would you like to do (enter number):\n1: Fisher-Yates Shuffle\n2: Riffle Shuffle\n3: No Shuffle\n");
             shuffle_type = int.Parse(Console.ReadLine());
             Console.WriteLine("How many do you want to deal?\n");
             deal_amount = int.Parse(Console.ReadLine());
 
 
-            if (shuffle_type != 3)
-            {
-                Pack.shuffleCardPack(shuffle_type);
-                shuffle_cards = true;
-            }
-            else
-            {
-                shuffle_cards = false;
-            }
+            Pack.shuffleCardPack(shuffle_type);
+
 
             if (deal_amount == 1)
             {

@@ -13,14 +13,14 @@ namespace CMP1903M_A01_2223
         //Suit: numbers 1 - 4
         //The 'set' methods for these properties could have some validation
 
-        protected int _Value = 0;
+        protected int _Value = 1;
         public int Value 
         { 
             get
             {
                 return _Value;
             }
-            set
+            private set
             {
                 Random num = new Random();
 
@@ -29,14 +29,14 @@ namespace CMP1903M_A01_2223
         }
 
 
-        protected int _Suit = 0;
+        protected int _Suit = 1;
         public int Suit
         {
             get
             {
                 return _Suit;
             }
-            set
+            private set
             {
                 Random num = new Random();
 

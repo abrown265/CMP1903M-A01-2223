@@ -12,26 +12,40 @@ namespace CMP1903M_A01_2223
         {
             int shuffle_type = 0;
             int deal_amount = 0;
-            bool shuffle_cards;
 
-            Console.WriteLine("What kind of shuffle would you like to do (enter number):\n1: Fisher-Yates Shuffle\n2: Riffle Shuffle\n3: No Shuffle\n");
+            Console.WriteLine("What kind of shuffle would you like to do (enter number):\n1: Fisher-Yates Shuffle\n2: Riffle Shuffle\n3: No Shuffle\n4: Test everything\n");
             shuffle_type = int.Parse(Console.ReadLine());
-            Console.WriteLine("How many do you want to deal?\n");
-            deal_amount = int.Parse(Console.ReadLine());
-
-
-            Pack.shuffleCardPack(shuffle_type);
-
-
-            if (deal_amount == 1)
+            while (shuffle_type < 1 || shuffle_type > 4)
             {
-                Pack.deal();
+                Console.WriteLine("Invalid entry, enter again.");
+                Console.WriteLine("What kind of shuffle would you like to do (enter number):\n1: Fisher-Yates Shuffle\n2: Riffle Shuffle\n3: No Shuffle\n4: Test everything\n");
+                shuffle_type = int.Parse(Console.ReadLine());
+            }
+            
+            Console.WriteLine("How many do you want to deal?(enter any number 1-52 if testing)\n");
+            deal_amount = int.Parse(Console.ReadLine());
+            while (deal_amount < 1 || deal_amount > 52)
+            {
+                Console.WriteLine("Invalid entry, enter again.");
+                Console.WriteLine("How many do you want to deal?\n");
+                deal_amount = int.Parse(Console.ReadLine());
+            }
+
+            Pack pack = new Pack();
+            string[] card_pack = Pack.Create_Pack();
+            
+            card_pack = Pack.shuffleCardPack(shuffle_type, card_pack);
+
+            
+            if (deal_amount == 1)
+            {              
+                Pack.deal(card_pack);
             }
             else
             {
-                Pack.dealCard(deal_amount);
+                Pack.dealCard(deal_amount, card_pack);
             }
-
+            
 
             Console.ReadLine();
         }
